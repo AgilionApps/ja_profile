@@ -1,19 +1,11 @@
 # JaProfiler
 
-**TODO: Add description**
+Profile helper/tools for JaSerializer.
 
-## Installation
+## Usage
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+Clone in same directory as JaSerializer then:
 
-  1. Add ja_profiler to your list of dependencies in `mix.exs`:
-
-        def deps do
-          [{:ja_profiler, "~> 0.0.1"}]
-        end
-
-  2. Ensure ja_profiler is started before your application:
-
-        def application do
-          [applications: [:ja_profiler]]
-        end
+```
+MIX_ENV=prod mix do compile, profile.fprof -e 'JaProfiler.simple_doc(10)'
+```
